@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./server.js",
+    "prestart": "npm install",
+    "start": "forever server.js",
     "watch": "forever -w server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/zuev720/ahj-7.1-backend#readme",
   "dependencies": {
     "@koa/cors": "^3.1.0",
+    "forever": "^4.0.1",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
     "koa-router": "^10.0.0",
